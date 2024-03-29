@@ -1,0 +1,33 @@
+.footer {
+    width: 100%;
+    background-color: #4F4F4F;
+}
+
+.container-footer {
+    max-width: 1200px;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    gap: 200px;
+    padding-top: 64px;
+}
+
+.footer_one {
+    width: 364px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nkarAlloDoc2 {
+    Width: 203px;
+    Height: 53px;
+}
+
+.text_footer {
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    color: #AFAFAF;
+    font-size: 12px;
+    font-weight: bold;
+}

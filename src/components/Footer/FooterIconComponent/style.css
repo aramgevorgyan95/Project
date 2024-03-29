@@ -1,0 +1,6 @@
+.footer_icon{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-top: 15px;
+}

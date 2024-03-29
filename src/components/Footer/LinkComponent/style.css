@@ -1,0 +1,11 @@
+.link{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: flex-end;
+}
+
+.link_text{
+    color: #FFFFFF;
+    text-decoration: none;
+}

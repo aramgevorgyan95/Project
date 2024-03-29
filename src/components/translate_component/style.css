@@ -1,0 +1,33 @@
+.button_translate_avtive {
+    width: 30px;
+    height: 30px;
+    border-radius: 0 0 10px 10px;
+    color: aliceblue;
+    background-color: #56CCF2;
+    border: none;
+    cursor: pointer;
+}
+
+.button_translate_noactive {
+    width: 30px;
+    height: 30px;
+    border-radius: 0 0 10px 10px;
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons {
+    width: 100%;
+}
+
+.container2 {
+    width: 100%;
+    margin: auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

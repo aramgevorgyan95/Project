@@ -1,0 +1,8 @@
+.visit_button{
+    Width: 225px;
+    Height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}

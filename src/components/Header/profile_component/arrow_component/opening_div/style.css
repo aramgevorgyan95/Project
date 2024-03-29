@@ -1,0 +1,21 @@
+.opening_div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 0.5px solid #C9C9C9;
+    font-size: 13px;
+    padding: 3% 0 3% 5%;
+    cursor: pointer;
+}
+
+.container_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.size_logo {
+    width: 14px;
+    height: 14px;
+}
