@@ -17,7 +17,7 @@ function DoctorVisit({ filterStatus }) {
     // }
 
     const filteredArr = arrUserDoc.filter((el) => el.status === filterStatus);
-    console.log(filterStatus)
+    // console.log(filterStatus)
 
     return (
         <>

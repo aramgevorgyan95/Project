@@ -2,7 +2,7 @@ import './style.css';
 import nkarAlloDoc2 from '../../images/alloDoc2.png'
 import FooterIconComponent from './FooterIconComponent/footericoncomponent';
 import FooterApplication from './FooterApplicationComponent/footerApplication';
-import LinkComponents from './LinkComponent/link';
+import LinkComponents from './LinkComponent/link'
 import AboutUs from './AboutUs/aboutUs';
 
 

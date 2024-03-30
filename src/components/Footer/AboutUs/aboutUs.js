@@ -8,7 +8,7 @@ import LinkComponents from '../LinkComponent/link';
 
 
 function AboutUs() {
-    const arrSvg = [email, geolocation, footerClock, contact];
+    const arrSvg = [email, geolocation, footerClock, contact]
 
     return (
         <div className='about_tri'>

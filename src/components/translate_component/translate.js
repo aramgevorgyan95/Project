@@ -1,14 +1,22 @@
+import { useState } from 'react';
 import './style.css';
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import TranslateContext from '../../translateContext';
+
 
 
 function Translate({ language1, language2 }) {
 
+    const t = useContext(TranslateContext)
+
     const [show, isShow] = useState(true);
 
-    const handleClickTranslate = function () {
+    const handleClickTranslate = function (e) {
+        t.setTranslatePage(e.target.innerText)
         isShow(prev => !prev)
     }
+
+    
 
     return (
         <div>

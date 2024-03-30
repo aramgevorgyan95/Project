@@ -1,11 +1,9 @@
 import './style.css'
 
-function TextHeader() {
+function TextHeader({text}) {
     return (
         <div className='text_header'>
-            <a href='#' className='text'>Как пользоваться?</a>
-            <a href='#' className='text'>Мои записи</a>
-            <a href='#' className='text'>Записаться к врачу</a>
+            <a href='#' className='text'>{text}</a>
         </div>
     )
 }
