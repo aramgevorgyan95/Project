@@ -5,6 +5,7 @@ import TranslateContext from '../../translateContext';
 
 
 
+
 function Translate({ language1, language2 }) {
 
     const t = useContext(TranslateContext)
@@ -12,7 +13,7 @@ function Translate({ language1, language2 }) {
     const [show, isShow] = useState(true);
 
     const handleClickTranslate = function (e) {
-        t.setTranslatePage(e.target.innerText)
+        t.setTranslatePage(e.target.innerHTML)
         isShow(prev => !prev)
     }
 

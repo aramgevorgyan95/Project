@@ -6,19 +6,34 @@ import Main2 from "./components/Mian2/mian_2";
 import TranslateContext from "./translateContext";
 import { useState } from "react";
 
+// import Language from "./translate_Ru_En";
+
 
 
 
 
 function App() {
 
-  const [translatePage, setTranslatePage] = useState('RU')
+  const [translatePage, setTranslatePage] = useState('RU');  //Language.ru
+
+  // function translateRU (){
+  //   setTranslatePage(Language.RU)
+  // }
+
+  // function translateEN (){
+  //   setTranslatePage(Language.EN)
+  // }
   
+
+
+    // console.log(translatePage)
   return (
     <div>
       <TranslateContext.Provider value={{
         translatePage,
-        setTranslatePage
+        setTranslatePage,
+        // translateRU,
+        // translateEN
       }}>
         <Header />
         <Main />

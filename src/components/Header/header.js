@@ -10,6 +10,7 @@ import Language from "../../translate_Ru_En";
 
 
 
+
 function Header() {
     const { translatePage } = useContext(TranslateContext)
     console.log(translatePage)
