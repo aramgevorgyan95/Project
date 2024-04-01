@@ -6,12 +6,13 @@ import ProfileSettings from "./profile_component/profile_settings";
 import Translate from "../translate_component/translate";
 import { useContext } from "react";
 import TranslateContext from "../../translateContext";
-import language from "../../translate_Ru_En";
-// import language from "../../translate_Ru_En";
+import Language from "../../translate_Ru_En";
+
 
 
 function Header() {
-    const {translatePage} = useContext(TranslateContext)
+    const { translatePage } = useContext(TranslateContext)
+    console.log(translatePage)
     return (
         <div className="header">
             <Translate language1={'RU'} language2={'EN'} />
@@ -19,9 +20,9 @@ function Header() {
                 <div className="header_container">
                     <div className="left_header"><img src={nkarAllDoc} alt="logo"></img></div>
                     <div className="right_header">
-                        <TextHeader text={language[translatePage].text1}/>
-                        <TextHeader text={'Мои записи'}/>
-                        <TextHeader text={'Записаться к врачу'}/>
+                        <TextHeader text={Language[translatePage].header_text_first} />
+                        <TextHeader text={Language[translatePage].header_text_second} />
+                        <TextHeader text={Language[translatePage].header_text_third} />
                         <Icon />
                         <ProfileSettings />
                     </div>

@@ -1,6 +1,8 @@
 import './style.css';
 
-function ProfilePhoto({ name }) {
+
+function ProfilePhoto({name}) {
+ 
 
     return (
 

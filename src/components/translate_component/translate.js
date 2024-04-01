@@ -16,7 +16,6 @@ function Translate({ language1, language2 }) {
         isShow(prev => !prev)
     }
 
-    
 
     return (
         <div>
