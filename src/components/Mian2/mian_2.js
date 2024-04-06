@@ -9,9 +9,9 @@ import { useState } from 'react';
 function Main2() {
     const [filterStatus, setFilterStatus] = useState(1);
 
-    const changeStatus = function (status_number) {
-        setFilterStatus(status_number)
-    }
+    // const changeStatus = function (status_number) {
+    //     setFilterStatus(status_number)
+    // }
 
     return (
         <div className='mian2_container'>
@@ -21,9 +21,9 @@ function Main2() {
             <button style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>мои записи</button>
             <div className='mian'>
                 <div className='div_buton_main2'>
-                    <ButtonMain2 text="Предстоящие" onClick={() => changeStatus(1)} />
-                    <ButtonMain2 text="Прошедшие" onClick={() => changeStatus(2)} />
-                    <ButtonMain2 text="Отмененные" onClick={() => changeStatus(3)} />
+                    <ButtonMain2 text="Предстоящие" onClick={() => setFilterStatus(1)} />
+                    <ButtonMain2 text="Прошедшие" onClick={() => setFilterStatus(2)} />
+                    <ButtonMain2 text="Отмененные" onClick={() => setFilterStatus(3)} />
                 </div>
                 <div className='data_list'>
                     <DoctorVisit filterStatus={filterStatus} />

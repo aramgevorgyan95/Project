@@ -21,9 +21,10 @@ function DoctorVisit({ filterStatus }) {
     const navigate = useNavigate();
     // console.log(filterStatus)
 
-    function doctorInfoClick(){
+    function doctorInfoClick() {
         navigate(`/doctor/:id`)
     }
+
     return (
         <>
             {
@@ -48,14 +49,14 @@ function DoctorVisit({ filterStatus }) {
                                 <div className='photo_ingfo'>
                                     <div className='photo_visit'></div>
                                     <div className='imfo_name'>
-                                        <p style={{color: '#4F4F4F', fontWeight: 'bold'}}>{el.name}</p>
-                                        <p style={{color: '#AAAAAA'}}>{el.profession}</p>
-                                        <p style={{color: '#4F4F4F'}}>{el.experience}</p>
+                                        <p style={{ color: '#4F4F4F', fontWeight: 'bold' }}>{el.name}</p>
+                                        <p style={{ color: '#AAAAAA' }}>{el.profession}</p>
+                                        <p style={{ color: '#4F4F4F' }}>{el.experience}</p>
                                     </div>
                                 </div>
                                 <div className='visitButton_container'>
-                                    <ButtonVisit text='Посмотреть запись' backgroundColor='#56CCF2' colorText='#FFFFFF'/>
-                                    <ButtonVisit text='Посмотреть постановление' backgroundColor='#F6F8FB' colorText='#A7A7A7'/>
+                                    <ButtonVisit text='Посмотреть запись' backgroundColor='#56CCF2' colorText='#FFFFFF' />
+                                    <ButtonVisit text='Посмотреть постановление' backgroundColor='#F6F8FB' colorText='#A7A7A7' />
                                 </div>
                             </div>
                         </div>
