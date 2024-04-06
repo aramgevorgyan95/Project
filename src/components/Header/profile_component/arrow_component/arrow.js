@@ -6,11 +6,14 @@ import user_logo from '../../../../images/user_logo.svg'
 import money from '../../../../images/credit_card_logo.svg'
 import faq from '../../../../images/help_logo.svg'
 import logout from '../../../../images/logout_logo.svg'
+import { useNavigate } from 'react-router';
 
 
 function Arrow() {
 
     const [arrow, setArrow] = useState(false);
+    const navigate = useNavigate()
+
 
     // useEffect(() => {
     //     if (arrow) {
@@ -22,6 +25,11 @@ function Arrow() {
         setArrow(!arrow)
     }
 
+    function handleBalancClick() {
+        navigate('/balance');
+    }
+
+
     return (
         <div>
             <button className='button_arrow' onClick={handleClick}  >
@@ -30,7 +38,7 @@ function Arrow() {
             <div className='arrow_div'>
                 {arrow ? <div className='arrow_opening_div'>
                     <OpeningDiv divText='Мой Профил' logo={user_logo} />
-                    <OpeningDiv divText='Пополнить баланс' logo={money} />
+                    <OpeningDiv onClick={handleBalancClick} divText='Пополнить баланс' logo={money} />
                     <OpeningDiv divText='FAQ' logo={faq} />
                     <OpeningDiv divText='Выйти' logo={logout} />
                 </div> : null}

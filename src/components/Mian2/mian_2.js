@@ -3,22 +3,26 @@ import './style.css';
 import DoctorVisit from './DoctorsVisit/doctorVisit';
 import ButtonMain2 from './ButtonMain2/buttonMain2';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 
 
 function Main2() {
     const [filterStatus, setFilterStatus] = useState(1);
+    const navigate = useNavigate();
 
     // const changeStatus = function (status_number) {
     //     setFilterStatus(status_number)
     // }
-
+    function handleClicMynotes() {
+        navigate('/mynotes');
+    }
     return (
         <div className='mian2_container'>
             <div className='register_doc'>
                 <img src={photo_register_doctor} alt='register_user'></img>
             </div>
-            <button style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>мои записи</button>
+            <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>мои записи</button>
             <div className='mian'>
                 <div className='div_buton_main2'>
                     <ButtonMain2 text="Предстоящие" onClick={() => setFilterStatus(1)} />

@@ -1,8 +1,8 @@
 import './style.css'
 
-function OpeningDiv({ divText, logo }) {
+function OpeningDiv({ onClick, divText, logo }) {
     return (
-        <div className='opening_div'>
+        <div onClick={onClick} className='opening_div'>
             <div className='container_logo'>
                 <img className='size_logo' src={logo} alt='logo'></img>
             </div>
