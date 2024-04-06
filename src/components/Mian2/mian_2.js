@@ -22,7 +22,9 @@ function Main2() {
             <div className='register_doc'>
                 <img src={photo_register_doctor} alt='register_user'></img>
             </div>
+
             <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>мои записи</button>
+
             <div className='mian'>
                 <div className='div_buton_main2'>
                     <ButtonMain2 text="Предстоящие" onClick={() => setFilterStatus(1)} />

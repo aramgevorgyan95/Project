@@ -7,19 +7,24 @@ import Translate from "../translate_component/translate";
 import { useContext } from "react";
 import TranslateContext from "../../translateContext";
 import Language from "../../translate_Ru_En";
+import { useNavigate } from "react-router";
 
 
 
 
 function Header() {
     const { translatePage } = useContext(TranslateContext)
-    console.log(translatePage)
+    const navigate = useNavigate()
+
+    function homeClick() {
+        navigate('/')
+    }
     return (
         <div className="header">
             <Translate language1={'RU'} language2={'EN'} />
             <div >
                 <div className="header_container">
-                    <div className="left_header"><img src={nkarAllDoc} alt="logo"></img></div>
+                    <div onClick={homeClick} className="left_header"><img src={nkarAllDoc} alt="logo"></img></div>
                     <div className="right_header">
                         <TextHeader text={Language[translatePage].header_text_first} />
                         <TextHeader text={Language[translatePage].header_text_second} />

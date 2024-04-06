@@ -21,8 +21,8 @@ function DoctorVisit({ filterStatus }) {
     const navigate = useNavigate();
     // console.log(filterStatus)
 
-    function doctorInfoClick() {
-        navigate(`/doctor/:id`)
+    function doctorInfoClick(id) {
+        navigate(`/doctor/${id}`)
     }
 
     return (
@@ -30,7 +30,7 @@ function DoctorVisit({ filterStatus }) {
             {
                 filteredArr.map((el, index) => {
                     return (
-                        <div onClick={doctorInfoClick} className='main_visit' key={index}>
+                        <div onClick={() => doctorInfoClick(el.id)} className='main_visit' key={index}>
 
                             <div className='visit_header'>
                                 <div className='header_left'>
@@ -47,7 +47,9 @@ function DoctorVisit({ filterStatus }) {
                             </div>
                             <div className='visit_imfo'>
                                 <div className='photo_ingfo'>
-                                    <div className='photo_visit'></div>
+                                    <div className='photo_visit'>
+                                        <img src={el.photo}></img>
+                                    </div>
                                     <div className='imfo_name'>
                                         <p style={{ color: '#4F4F4F', fontWeight: 'bold' }}>{el.name}</p>
                                         <p style={{ color: '#AAAAAA' }}>{el.profession}</p>

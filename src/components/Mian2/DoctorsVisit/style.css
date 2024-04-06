@@ -60,7 +60,9 @@
     border-radius: 50%;
     width: 125px;
     height: 125px;
-    background-image: url('../../../images/visit_photo.svg');
+    display: flex;
+    
+    /* background-image: url('../../../images/visit_photo.svg'); */
 }
 
 .visit_imfo {

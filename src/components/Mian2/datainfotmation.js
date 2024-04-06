@@ -2,6 +2,7 @@ import chat_logo from '../../images/chat_logo.svg'
 import calendar_logo from '../../images/calendar.svg';
 import clock_logo from '../../images/clock 1.svg';
 import camera from '../../images/video-camera.svg';
+import doc1 from '../../images/doc1.png'
 
 
 const arrUserDoc = [
@@ -15,7 +16,9 @@ const arrUserDoc = [
         statusText: 'Запланировано',
         name: 'Ольга Никитина',
         experience: 'Стаж 15 лет',
-        profession: 'Педиатр'
+        profession: 'Педиатр',
+        photo: doc1
+
     },
     {
         id: 2,
