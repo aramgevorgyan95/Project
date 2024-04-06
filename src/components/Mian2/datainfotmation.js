@@ -3,6 +3,9 @@ import calendar_logo from '../../images/calendar.svg';
 import clock_logo from '../../images/clock 1.svg';
 import camera from '../../images/video-camera.svg';
 import doc1 from '../../images/doc1.png'
+import doc2 from '../../images/doc2.jpg'
+import doc3 from '../../images/doc3.jpg'
+import rubliConsult from '../../images/poqrRubli.png'
 
 // sa arden Balance eji hamar e 
 import visa from '../../images/visa.svg'
@@ -22,7 +25,9 @@ const arrUserDoc = [
         name: 'Ольга Никитина',
         experience: 'Стаж 15 лет',
         profession: 'Педиатр',
-        photo: doc1
+        photo: doc1,
+        moneyConsult: '900',
+        valuta: rubliConsult
 
     },
     {
@@ -35,7 +40,8 @@ const arrUserDoc = [
         statusText: 'Состоялась',
         name: 'Лара Никитина',
         experience: 'Стаж 10 лет',
-        profession: 'Оториноларинголог (ЛОР), Терапевт'
+        profession: 'Оториноларинголог (ЛОР), Терапевт',
+        photo: doc2
 
     },
     {
@@ -48,7 +54,8 @@ const arrUserDoc = [
         statusText: 'Отменена',
         name: 'Алла Никитина',
         experience: 'Стаж 12 лет',
-        profession: 'Оториноларинголог (ЛОР), Терапевт'
+        profession: 'Оториноларинголог (ЛОР), Терапевт',
+        photo: doc3
     },
     {
         id: 4,
@@ -139,9 +146,9 @@ export const balanceData = [
     {
         status: "month",
         image: img1,
-        money: -460,
+        money: 4640,
         data: '10.03.2021',
-        text: 'Оплата за консультацию'
+        text: 'Пополнение'
 
     },
     {

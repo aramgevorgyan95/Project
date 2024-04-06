@@ -56,13 +56,11 @@
     width: 120px;
 }
 
-.photo_visit {
+.photo_visit img {
     border-radius: 50%;
     width: 125px;
     height: 125px;
     display: flex;
-    
-    /* background-image: url('../../../images/visit_photo.svg'); */
 }
 
 .visit_imfo {

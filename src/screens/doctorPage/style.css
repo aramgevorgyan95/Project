@@ -14,6 +14,19 @@
     Width: 170px;
     Height: 170px;
     border-radius: 50%;
-    background-color: aliceblue;
-    
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+}
+.consultation{
+    display: flex;
+}
+.valuta {
+    width: 13px;
+    height: 13px;
+    justify-content: center;
+    align-items: center;
 }
