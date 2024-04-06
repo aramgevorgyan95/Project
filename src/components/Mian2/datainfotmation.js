@@ -6,6 +6,7 @@ import camera from '../../images/video-camera.svg';
 
 const arrUserDoc = [
     {
+        id: 1,
         data: '01 Марта 2024',
         time: '09 : 00',
         text: 'Видео связь',
@@ -17,6 +18,7 @@ const arrUserDoc = [
         profession: 'Педиатр'
     },
     {
+        id: 2,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         text: 'Чат',
@@ -29,6 +31,7 @@ const arrUserDoc = [
 
     },
     {
+        id: 3,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         logo: [chat_logo, calendar_logo, clock_logo, camera],
@@ -40,6 +43,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 4,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         text: 'Видео связь',
@@ -51,6 +55,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 5,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         text: 'Чат',
@@ -62,6 +67,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 6,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         logo: [chat_logo, calendar_logo, clock_logo, camera],
@@ -73,6 +79,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 7,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         text: 'Видео связь',
@@ -84,6 +91,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 8,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         text: 'Чат',
@@ -95,6 +103,7 @@ const arrUserDoc = [
         profession: 'Оториноларинголог (ЛОР), Терапевт'
     },
     {
+        id: 9,
         data: '09 Марта 2021 ',
         time: '19 : 00',
         logo: [chat_logo, calendar_logo, clock_logo, camera],

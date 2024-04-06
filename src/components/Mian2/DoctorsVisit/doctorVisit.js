@@ -1,4 +1,5 @@
 // import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import arrUserDoc from '../datainfotmation';
 import ButtonVisit from './buttonVisit/buttonVizit';
 import ImageLogo from './imageLogo';
@@ -17,14 +18,18 @@ function DoctorVisit({ filterStatus }) {
     // }
 
     const filteredArr = arrUserDoc.filter((el) => el.status === filterStatus);
+    const navigate = useNavigate();
     // console.log(filterStatus)
 
+    function doctorInfoClick(){
+        navigate(`/doctor/:id`)
+    }
     return (
         <>
             {
                 filteredArr.map((el, index) => {
                     return (
-                        <div className='main_visit' key={index}>
+                        <div onClick={doctorInfoClick} className='main_visit' key={index}>
 
                             <div className='visit_header'>
                                 <div className='header_left'>
