@@ -27,6 +27,7 @@ function Arrow() {
 
     function handleBalancClick() {
         navigate('/balance');
+        setArrow(false)
     }
 
 

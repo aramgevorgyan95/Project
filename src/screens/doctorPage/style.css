@@ -1,12 +1,19 @@
 .doctorImformation {
     width: 100%;
     height: 316px;
-    background-color: #56CCF2
+    background-color: #56CCF2;
+    display: flex;
+    justify-content: space-around;
 }
 
-.PhotoDoctorImformation {
+.PhotoDoctorImformation{
+    display: flex;
+}
+
+.PhotoDoctorImformation img {
     Width: 170px;
     Height: 170px;
     border-radius: 50%;
     background-color: aliceblue;
+    
 }

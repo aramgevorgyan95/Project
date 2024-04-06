@@ -1,0 +1,89 @@
+.balanceContainer {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.balance_text {
+    font-size: 30px;
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.money_button {
+    display: flex;
+    gap: 40px;
+}
+
+.money {
+    color: #219653;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.money img {
+    width: 36px;
+    height: 36px;
+}
+
+.button_Add {
+    display: flex;
+    align-items: center;
+}
+
+.button_balanceAdd {
+    width: 355px;
+    height: 40px;
+    font-size: 14px;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.history {
+    font-size: 18px;
+    color:#4F4F4F;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.button_status {
+    margin: 10px;
+    display: flex;
+    gap: 40px;
+    margin: 20px 0 30px 20px
+}
+.button_status button{
+    border: none;
+    background-color: #F6F8FB;
+    height: 27px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.paymentHistory{
+    Width: 1145px;
+    Height: 68px;
+    background-color: #F6F8FB;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+}
+.paymentDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.greenStyle{
+    color: #219653;
+}
+.redStyle {
+    color: #EB5757;
+}

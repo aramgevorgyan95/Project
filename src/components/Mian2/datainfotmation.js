@@ -4,6 +4,11 @@ import clock_logo from '../../images/clock 1.svg';
 import camera from '../../images/video-camera.svg';
 import doc1 from '../../images/doc1.png'
 
+// sa arden Balance eji hamar e 
+import visa from '../../images/visa.svg'
+import img1 from '../../images/balanci_demq.svg'
+import img2 from '../../images/balanci_demq2.svg'
+
 
 const arrUserDoc = [
     {
@@ -120,3 +125,55 @@ const arrUserDoc = [
 ];
 
 export default arrUserDoc;
+
+
+
+export const balanceData = [
+    {
+        status: "day",
+        image: visa,
+        money: 500,
+        data: '10.03.2021',
+        text: 'Пополнение'
+    },
+    {
+        status: "month",
+        image: img1,
+        money: -460,
+        data: '10.03.2021',
+        text: 'Оплата за консультацию'
+
+    },
+    {
+        status: "all",
+        image:img2,
+        money: -2409,
+        data: '10.03.2021',
+        text: 'Оплата за консультацию'
+
+    },
+    {
+        status: "day",
+        image: visa,
+        money: 5050,
+        data: '10.03.2021',
+        text: 'Пополнение'
+    },
+    {
+        status: "month",
+        image: img1,
+        money: -4650,
+        data: '10.03.2021',
+        text: 'Оплата за консультацию'
+
+    },
+    {
+        status: "all",
+        image:img2,
+        money: -2249,
+        data: '10.03.2021',
+        text: 'Оплата за консультацию'
+
+    },
+
+]

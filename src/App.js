@@ -7,9 +7,10 @@ import Header from "./components/Header/header";
 import TranslateContext from "./translateContext";
 import { useState } from "react";
 import HomePage from "./screens/homePage/HomePage";
-import DoctorPage from "./screens/doctorPage/DoctorPage";
+
 import Balance from "./screens/balancePage/BalancePage";
 import MyNotes from "./screens/myNotesPage/MyNotes";
+import DoctorPage from "./screens/doctorPage/doctorPage";
 
 
 // import Language from "./translate_Ru_En";
