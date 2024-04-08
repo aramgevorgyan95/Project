@@ -1,8 +1,15 @@
 import "./style.css";
 import photo_doctor from '../../images/allodoctor.png.png';
 import ButtonMain from "./ButtonMain/buttonMain";
+import TranslateContext from "../../translateContext";
+import { useContext } from "react";
+import Language from "../../translate_Ru_En";
 
 function Main() {
+
+    
+    const { translatePage } = useContext(TranslateContext);
+
     return (
         <div className="main_container">
             <div className="text_main_div">
@@ -12,10 +19,7 @@ function Main() {
                     <p>врачей специалистов 24/7</p>
                 </div>
                 <div className="text2_main">
-                    <p>
-                        Проконсультируйтесь <b>сейчас</b> или по <b>предварительной записи</b> со своего компьютера или c помощью нашего приложения, доступного в
-                        <b className='blue_text'>App Store</b> и <b className='blue_text'>Google Play</b>
-                    </p>
+                    {Language[translatePage].Main_text}
                 </div>
                 <div className="button_container">
                     <ButtonMain text='Записаться' color='#56CCF2' backgroundColor='white' border='2px solid #56CCF2' />

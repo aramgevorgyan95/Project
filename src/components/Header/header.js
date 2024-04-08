@@ -13,7 +13,7 @@ import { useNavigate } from "react-router";
 
 
 function Header() {
-    const { translatePage } = useContext(TranslateContext)
+    const { translatePage } = useContext(TranslateContext);
     const navigate = useNavigate()
 
     function homeClick() {

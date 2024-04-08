@@ -1,9 +1,12 @@
 // import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import arrUserDoc from '../datainfotmation';
+import { arrUserDoc, buttonDoctorVisit } from '../datainfotmation';
 import ButtonVisit from './buttonVisit/buttonVizit';
 import ImageLogo from './imageLogo';
 import './style.css';
+import TranslateContext from '../../../translateContext';
+import { useCallback, useContext } from 'react';
+
 
 
 
@@ -15,22 +18,29 @@ function DoctorVisit({ filterStatus }) {
 
     // const changeStatus = function (show) {
     //     setFilterStatus(show)
-    // }
-
-    const filteredArr = arrUserDoc.filter((el) => el.status === filterStatus);
+    // } 
+    const { translatePage } = useContext(TranslateContext);
+    const filteredArr = arrUserDoc[translatePage].filter((el) => el.status === filterStatus);
+    // console.log(arrUserDoc[translatePage].filter((el) => el.status === filterStatus));
     const navigate = useNavigate();
     // console.log(filterStatus)
 
-    function doctorInfoClick(id) {
-        navigate(`/doctor/${id}`)
-    }
+
+
+    const doctorInfoClick = useCallback((id) => {
+        return () => {
+            navigate(`/doctor/${id}`)
+        }
+    },)
+
+
 
     return (
         <>
             {
                 filteredArr.map((el, index) => {
                     return (
-                        <div onClick={() => doctorInfoClick(el.id)} className='main_visit' key={index}>
+                        <div onClick={doctorInfoClick(el.id)} className='main_visit' key={index}>
 
                             <div className='visit_header'>
                                 <div className='header_left'>
@@ -48,7 +58,7 @@ function DoctorVisit({ filterStatus }) {
                             <div className='visit_imfo'>
                                 <div className='photo_ingfo'>
                                     <div className='photo_visit'>
-                                        <img src={el.photo}></img>
+                                        <img src={el.photo} alt='photo' />
                                     </div>
                                     <div className='imfo_name'>
                                         <p style={{ color: '#4F4F4F', fontWeight: 'bold' }}>{el.name}</p>
@@ -57,8 +67,8 @@ function DoctorVisit({ filterStatus }) {
                                     </div>
                                 </div>
                                 <div className='visitButton_container'>
-                                    <ButtonVisit text='Посмотреть запись' backgroundColor='#56CCF2' colorText='#FFFFFF' />
-                                    <ButtonVisit text='Посмотреть постановление' backgroundColor='#F6F8FB' colorText='#A7A7A7' />
+                                    <ButtonVisit text={buttonDoctorVisit[translatePage].buttonDoctorVizitZapis} backgroundColor='#56CCF2' colorText='#FFFFFF' />
+                                    <ButtonVisit text={buttonDoctorVisit[translatePage].buttonResolution} backgroundColor='#F6F8FB' colorText='#A7A7A7' />
                                 </div>
                             </div>
                         </div>

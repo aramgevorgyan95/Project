@@ -2,6 +2,8 @@ import './style.css';
 
 function ButtonVisit({text, backgroundColor,colorText}) {
 
+    
+
     const dizain = {
         backgroundColor: backgroundColor,
         color: colorText

@@ -10,7 +10,7 @@ import HomePage from "./screens/homePage/HomePage";
 
 import Balance from "./screens/balancePage/BalancePage";
 import MyNotes from "./screens/myNotesPage/MyNotes";
-import DoctorPage from "./screens/doctorPage/doctorPage";
+import DoctorPage from "./screens/doctorPage/DoctorPage";
 
 
 // import Language from "./translate_Ru_En";
@@ -51,7 +51,6 @@ function App() {
         </Routes>
         <Footer />
       </TranslateContext.Provider>
-
     </div>
   );
 }

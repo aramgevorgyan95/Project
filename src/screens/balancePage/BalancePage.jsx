@@ -1,14 +1,17 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { balanceData } from "../../components/Mian2/datainfotmation"
 import './style.css'
 import rubliGreen from '../../images/rubliGreen.svg'
-import rubliRed from '../../images/rubliRed.svg'
+import TranslateContext from "../../translateContext";
+// import rubliRed from '../../images/rubliRed.svg'
 // import rubli from '../../images/rubli.svg'
 
 
 function Balance() {
-    const [status, setStatus] = useState("all")
-    
+    const [status, setStatus] = useState("all");
+
+    const { translatePage } = useContext(TranslateContext);
+
     return (
         <div className="balanceContainer">
             <div className="balance">
@@ -38,10 +41,10 @@ function Balance() {
                     </div>
                     <div>
                         {
-                            balanceData.map(el => {
+                            balanceData[translatePage].map(el => {
                                 return status === "all" || el.status === status ?
                                     <div className="paymentHistory">
-                                        <div className="paymentDiv"><img src={el.image} /></div>
+                                        <div className="paymentDiv"><img src={el.image} alt="image" /></div>
                                         <div className="paymentDiv"><p>{el.data}</p></div>
                                         <div className="paymentDiv"><p>{el.text}</p></div>
                                         <div className="paymentDiv"><p className={el.money > 0 ? "greenStyle" : "redStyle"}>{el.money > 0 ? `+${el.money}  R` : `${el.money}  R`}</p></div>
