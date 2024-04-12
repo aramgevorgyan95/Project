@@ -7,11 +7,12 @@ import TranslateContext from "../../translateContext";
 function DoctorPage() {
     let { id } = useParams();
 
-    console.log(id)
-
     const { translatePage } = useContext(TranslateContext);
 
-    const doctorData = arrUserDoc[translatePage].filter(el => el.id == id)[0];
+    const doctorData = arrUserDoc[translatePage].filter(el => el.id.toString() === id)[0];
+
+    // console.log(arrUserDoc[translatePage].filter(el => el.id == id)[0].id);
+    // console.log(id);
 
 
     return (
