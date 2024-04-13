@@ -1,5 +1,6 @@
 const Language = {
     RU: {
+        //Header---------------------------------------------------------------------------------------------------------------------------------------------------
         header_text_first: 'Как пользоваться?',
         header_text_second: 'Мои записи',
         header_text_third: 'Записаться к врачу',
@@ -30,9 +31,11 @@ const Language = {
         linkService: 'О сервисе',
         linkContact: 'Контакты',
         linkUser: 'Пользовательское соглашение',
+
         //footerAbout---------------------------------------------------------------------------------------------------------------------------------------------------
         textCityAdres: 'г. Москва. ул, Ленина 54, офис 51',
         textDayJob: 'Пн-Вс с 09:00 до 18:00',
+        
         //balancePage---------------------------------------------------------------------------------------------------------------------------------------------------
         headerTextBalance: 'Баланс',
         historyBalance: 'История платежей',
@@ -45,6 +48,7 @@ const Language = {
 
     },
     EN: {
+        //Header---------------------------------------------------------------------------------------------------------------------------------------------------
         header_text_first: 'How to use?',
         header_text_second: 'My notes',
         header_text_third: 'Appointment with a doctor',
@@ -67,7 +71,6 @@ const Language = {
         buttonMain2filter3: 'Canceled',
 
         //footer--------------------------------------------------------------------------------------------------------------------------------------------------------
-
         onlinConsultText: 'Online consultations of specialist doctors, what this service offers.',
         onlinConsultText2: 'In our web and mobile application you will find expert doctors who will provide you with personalized care online 24/7',
         linkHowToUse: 'How to use',
@@ -76,6 +79,7 @@ const Language = {
         linkService: 'About the service',
         linkContact: 'Contacts',
         linkUser: 'Terms of use',
+
         //footerAbout---------------------------------------------------------------------------------------------------------------------------------------------------
         textCityAdres: 'Moscow city. st., Lenina 54, office 51',
         textDayJob: 'Mon-Sun from 09:00 to 18:00',

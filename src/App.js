@@ -2,18 +2,15 @@ import { Route, Routes } from "react-router";
 import "./App.css"
 import Footer from "./components/Footer/footer";
 import Header from "./components/Header/header";
-// import Main from "./components/Main/mian";
-// import Main2 from "./components/Mian2/mian_2";
 import TranslateContext from "./translateContext";
 import { useState } from "react";
 import HomePage from "./screens/homePage/HomePage";
-
 import Balance from "./screens/balancePage/BalancePage";
 import MyNotes from "./screens/myNotesPage/MyNotes";
 import DoctorPage from "./screens/doctorPage/DoctorPage";
 
 
-// import Language from "./translate_Ru_En";
+
 
 
 
