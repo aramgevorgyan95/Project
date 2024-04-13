@@ -8,6 +8,7 @@ import HomePage from "./screens/homePage/HomePage";
 import Balance from "./screens/balancePage/BalancePage";
 import MyNotes from "./screens/myNotesPage/MyNotes";
 import DoctorPage from "./screens/doctorPage/DoctorPage";
+// import { useTranslation } from "react-i18next";
 
 
 
@@ -17,7 +18,7 @@ import DoctorPage from "./screens/doctorPage/DoctorPage";
 
 
 function App() {
-
+  // const { t } = useTranslation();
   const [translatePage, setTranslatePage] = useState('RU');  //Language.ru
 
   // function translateRU (){
@@ -28,9 +29,6 @@ function App() {
   //   setTranslatePage(Language.EN)
   // }
 
-
-
-  // console.log(translatePage)
   return (
     <div>
       <TranslateContext.Provider value={{

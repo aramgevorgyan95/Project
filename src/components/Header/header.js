@@ -8,11 +8,13 @@ import { useContext } from "react";
 import TranslateContext from "../../translateContext";
 import Language from "../../translate_Ru_En";
 import { useNavigate } from "react-router";
+// import { useTranslation } from "react-i18next";
 
 
 
 
 function Header() {
+    // const { t } = useTranslation();
     const { translatePage } = useContext(TranslateContext);
     const navigate = useNavigate()
 
