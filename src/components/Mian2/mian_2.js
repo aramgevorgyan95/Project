@@ -2,12 +2,15 @@ import photo_register_doctor from '../../images/OBJECTS.png';
 import './style.css';
 import DoctorVisit from './DoctorsVisit/doctorVisit';
 import ButtonMain2 from './ButtonMain2/buttonMain2';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
+import TranslateContext from '../../translateContext';
+import Language from '../../translate_Ru_En';
 
 
 
 function Main2() {
+    const { translatePage } = useContext(TranslateContext);
     const [filterStatus, setFilterStatus] = useState(1);
     const navigate = useNavigate();
 
@@ -23,13 +26,13 @@ function Main2() {
                 <img src={photo_register_doctor} alt='register_user'></img>
             </div>
 
-            <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>мои записи</button>
+            <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>{Language[translatePage].buttonMyNotes}</button>
 
             <div className='mian'>
                 <div className='div_buton_main2'>
-                    <ButtonMain2 text="Предстоящие" onClick={() => setFilterStatus(1)} />
-                    <ButtonMain2 text="Прошедшие" onClick={() => setFilterStatus(2)} />
-                    <ButtonMain2 text="Отмененные" onClick={() => setFilterStatus(3)} />
+                    <ButtonMain2 text={Language[translatePage].buttonMain2filter1} onClick={() => setFilterStatus(1)} />
+                    <ButtonMain2 text={Language[translatePage].buttonMain2filter2} onClick={() => setFilterStatus(2)} />
+                    <ButtonMain2 text={Language[translatePage].buttonMain2filter3} onClick={() => setFilterStatus(3)} />
                 </div>
                 <div className='data_list'>
                     <DoctorVisit filterStatus={filterStatus} />

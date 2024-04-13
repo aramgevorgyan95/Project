@@ -4,11 +4,15 @@ import footerClock from '../../../images/clockfooter.svg';
 import geolocation from '../../../images/geolocation.svg';
 import contact from '../../../images/contact.svg';
 import LinkComponents from '../LinkComponent/link';
+import TranslateContext from '../../../translateContext';
+import { useContext } from 'react';
+import Language from '../../../translate_Ru_En';
 
 
 
 function AboutUs() {
-    const arrSvg = [email, geolocation, footerClock, contact]
+    const arrSvg = [email, geolocation, footerClock, contact];
+    const { translatePage } = useContext(TranslateContext)
 
     return (
         <div className='about_tri'>
@@ -25,8 +29,8 @@ function AboutUs() {
             </div>
             <div className='about_us_2'>
                 <LinkComponents tetx_link='allodoc@mail.com' />
-                <LinkComponents tetx_link='г. Москва. ул, Ленина 54, офис 51' />
-                <LinkComponents tetx_link='Пн-Вс с 09:00 до 18:00' />
+                <LinkComponents tetx_link={Language[translatePage].textCityAdres} />
+                <LinkComponents tetx_link={Language[translatePage].textDayJob} />
                 <LinkComponents tetx_link='8 800 555 35 35' />
             </div>
         </div>

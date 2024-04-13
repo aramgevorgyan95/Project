@@ -3,6 +3,7 @@ import { balanceData } from "../../components/Mian2/datainfotmation"
 import './style.css'
 import rubliGreen from '../../images/rubliGreen.svg'
 import TranslateContext from "../../translateContext";
+import Language from "../../translate_Ru_En";
 // import rubliRed from '../../images/rubliRed.svg'
 // import rubli from '../../images/rubli.svg'
 
@@ -17,7 +18,7 @@ function Balance() {
             <div className="balance">
 
                 <div className="balance_text">
-                    <p>Баланс</p>
+                    <p>{Language[translatePage].headerTextBalance}</p>
                 </div>
 
                 <div className="money_button">
@@ -26,18 +27,18 @@ function Balance() {
                         <img src={rubliGreen} alt="rubli" />
                     </div>
                     <div className="button_Add">
-                        <button className="button_balanceAdd">Пополнить счет</button>
+                        <button className="button_balanceAdd">{Language[translatePage].buttonBalance}</button>
                     </div>
                 </div>
 
                 <div>
                     <div className="history">
-                        <p>История платежей</p>
+                        <p>{Language[translatePage].historyBalance}</p>
                     </div>
                     <div className="button_status">
-                        <button onClick={() => setStatus("day")}>За сегодня</button>
-                        <button onClick={() => setStatus("month")}>За месяц</button>
-                        <button onClick={() => setStatus("all")}>За все время</button>
+                        <button onClick={() => setStatus("day")}>{Language[translatePage].buttonDayBalance}</button>
+                        <button onClick={() => setStatus("month")}>{Language[translatePage].buttonMonthBalance}</button>
+                        <button onClick={() => setStatus("all")}>{Language[translatePage].buttonAllBalance}</button>
                     </div>
                     <div>
                         {

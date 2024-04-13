@@ -15,15 +15,15 @@ function Main() {
             <div className="text_main_div">
                 <div className="orange_line"></div>
                 <div className="text_main">
-                    <p>Онлайн консультации от</p>
-                    <p>врачей специалистов 24/7</p>
+                    <p>{Language[translatePage].mianConsultText}</p>
+                    <p>{Language[translatePage].mianConsultText2}</p>
                 </div>
                 <div className="text2_main">
-                    {Language[translatePage].Main_text}
+                    {Language[translatePage].main_text}
                 </div>
                 <div className="button_container">
-                    <ButtonMain text='Записаться' color='#56CCF2' backgroundColor='white' border='2px solid #56CCF2' />
-                    <ButtonMain text='Как это работает?' color='white' backgroundColor='#56CCF2' border='none' />
+                    <ButtonMain text={Language[translatePage].mianButtonZapis} color='#56CCF2' backgroundColor='white' border='2px solid #56CCF2' />
+                    <ButtonMain text={Language[translatePage].mianButtonHowWorks} color='white' backgroundColor='#56CCF2' border='none' />
                 </div>
 
             </div>
