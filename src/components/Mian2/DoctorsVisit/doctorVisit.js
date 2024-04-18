@@ -23,9 +23,9 @@ function DoctorVisit({ filterStatus }) {
     // } 
     // const { translatePage } = useContext(TranslateContext);
     const { t } = useTranslation();
-    
-    const filteredArr = t('dataDoctor').filter((el) => el.status === filterStatus);
-    
+    const dataDoctor = t('dataDoctor');
+    const filteredArr = dataDoctor.filter((el) => el.status === filterStatus);
+    console.log(t('dataDoctor'))
     const navigate = useNavigate();
 
     const doctorInfoClick = useCallback((id) => {
