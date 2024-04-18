@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import { useParams } from "react-router"
 import { arrUserDoc } from "../../components/Mian2/datainfotmation";
 import './style.css'
-import TranslateContext from "../../translateContext";
+import { useTranslation } from "react-i18next";
+// import TranslateContext from "../../translateContext";
 
 function DoctorPage() {
     let { id } = useParams();
+    const { t } = useTranslation();
 
-    const { translatePage } = useContext(TranslateContext);
+    // const { translatePage } = useContext(TranslateContext);
 
-    const doctorData = arrUserDoc[translatePage].filter(el => el.id.toString() === id)[0];
+    const doctorData = t('dataDoctor', {returnObjects: true}).filter(el => el.id.toString() === id)[0];
 
     // console.log(arrUserDoc[translatePage].filter(el => el.id == id)[0].id);
     // console.log(id);

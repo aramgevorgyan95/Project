@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 // import rubli from '../../images/rubli.svg'
 
 
+
 function Balance() {
     const { t } = useTranslation();
     const [status, setStatus] = useState("all");
@@ -47,7 +48,7 @@ function Balance() {
                     </div>
                     <div>
                         {
-                            t('balanceData').map(el => {
+                            t('balanceData', {returnObjects: true}).map(el => {
                                 return status === "all" || el.status === status ?
                                     <div className="paymentHistory">
                                         <div className="paymentDiv"><img src={el.image} alt="image" /></div>
