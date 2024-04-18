@@ -2,15 +2,19 @@ import photo_register_doctor from '../../images/OBJECTS.png';
 import './style.css';
 import DoctorVisit from './DoctorsVisit/doctorVisit';
 import ButtonMain2 from './ButtonMain2/buttonMain2';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import TranslateContext from '../../translateContext';
-import Language from '../../translate_Ru_En';
+import { useTranslation } from 'react-i18next';
+// import { useContext } from 'react';
+// import TranslateContext from '../../translateContext';
+// import { useContext } from 'react';
+// import Language from '../../translate_Ru_En';
 
 
 
 function Main2() {
-    const { translatePage } = useContext(TranslateContext);
+    // const { translatePage } = useContext(TranslateContext)
+    const { t } = useTranslation();
     const [filterStatus, setFilterStatus] = useState(1);
     const navigate = useNavigate();
 
@@ -26,13 +30,13 @@ function Main2() {
                 <img src={photo_register_doctor} alt='register_user'></img>
             </div>
 
-            <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>{Language[translatePage].buttonMyNotes}</button>
+            <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>{t('buttonMyNotes')}</button>
 
             <div className='mian'>
                 <div className='div_buton_main2'>
-                    <ButtonMain2 text={Language[translatePage].buttonMain2filter1} onClick={() => setFilterStatus(1)} />
-                    <ButtonMain2 text={Language[translatePage].buttonMain2filter2} onClick={() => setFilterStatus(2)} />
-                    <ButtonMain2 text={Language[translatePage].buttonMain2filter3} onClick={() => setFilterStatus(3)} />
+                    <ButtonMain2 text={t('buttonMain2filter1')} onClick={() => setFilterStatus(1)} />
+                    <ButtonMain2 text={t('buttonMain2filter2')} onClick={() => setFilterStatus(2)} />
+                    <ButtonMain2 text={t('buttonMain2filter3')} onClick={() => setFilterStatus(3)} />
                 </div>
                 <div className='data_list'>
                     <DoctorVisit filterStatus={filterStatus} />

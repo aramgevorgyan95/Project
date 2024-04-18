@@ -1,11 +1,13 @@
 // import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { arrUserDoc, buttonDoctorVisit } from '../datainfotmation';
+// import { arrUserDoc, buttonDoctorVisit } from '../datainfotmation';
 import ButtonVisit from './buttonVisit/buttonVizit';
 import ImageLogo from './imageLogo';
 import './style.css';
-import TranslateContext from '../../../translateContext';
-import { useCallback, useContext } from 'react';
+// import TranslateContext from '../../../translateContext';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+// import { useContext } from 'react';
 
 
 
@@ -19,13 +21,12 @@ function DoctorVisit({ filterStatus }) {
     // const changeStatus = function (show) {
     //     setFilterStatus(show)
     // } 
-    const { translatePage } = useContext(TranslateContext);
-    const filteredArr = arrUserDoc[translatePage].filter((el) => el.status === filterStatus);
-    // console.log(arrUserDoc[translatePage].filter((el) => el.status === filterStatus));
+    // const { translatePage } = useContext(TranslateContext);
+    const { t } = useTranslation();
+    
+    const filteredArr = t('dataDoctor').filter((el) => el.status === filterStatus);
+    
     const navigate = useNavigate();
-    // console.log(filterStatus)
-
-
 
     const doctorInfoClick = useCallback((id) => {
         return () => {
@@ -67,8 +68,8 @@ function DoctorVisit({ filterStatus }) {
                                     </div>
                                 </div>
                                 <div className='visitButton_container'>
-                                    <ButtonVisit text={buttonDoctorVisit[translatePage].buttonDoctorVizitZapis} backgroundColor='#56CCF2' colorText='#FFFFFF' />
-                                    <ButtonVisit text={buttonDoctorVisit[translatePage].buttonResolution} backgroundColor='#F6F8FB' colorText='#A7A7A7' />
+                                    <ButtonVisit text={t('buttonDoctorVisit.buttonDoctorVizitZapis')} backgroundColor='#56CCF2' colorText='#FFFFFF' />
+                                    <ButtonVisit text={t('buttonDoctorVisit.buttonResolution')} backgroundColor='#F6F8FB' colorText='#A7A7A7' />
                                 </div>
                             </div>
                         </div>

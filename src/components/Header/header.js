@@ -4,18 +4,18 @@ import TextHeader from "./text_header/text";
 import Icon from "./icon_component/icon";
 import ProfileSettings from "./profile_component/profile_settings";
 import Translate from "../translate_component/translate";
-import { useContext } from "react";
-import TranslateContext from "../../translateContext";
-import Language from "../../translate_Ru_En";
+// import { useContext } from "react";
+// import TranslateContext from "../../translateContext";
+// import Language from "../../translate_Ru_En";
 import { useNavigate } from "react-router";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 
 
 
 function Header() {
-    // const { t } = useTranslation();
-    const { translatePage } = useContext(TranslateContext);
+    const { t } = useTranslation();
+    // const { translatePage } = useContext(TranslateContext);
     const navigate = useNavigate()
 
     function homeClick() {
@@ -28,9 +28,9 @@ function Header() {
                 <div className="header_container">
                     <div onClick={homeClick} className="left_header"><img src={nkarAllDoc} alt="logo"></img></div>
                     <div className="right_header">
-                        <TextHeader text={Language[translatePage].header_text_first} />
-                        <TextHeader text={Language[translatePage].header_text_second} />
-                        <TextHeader text={Language[translatePage].header_text_third} />
+                        <TextHeader text={t('header_text_first')} />
+                        <TextHeader text={t('header_text_second')} />
+                        <TextHeader text={t('header_text_third')} />
                         <Icon />
                         <ProfileSettings />
                     </div>

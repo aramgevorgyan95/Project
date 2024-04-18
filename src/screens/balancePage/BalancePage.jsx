@@ -1,24 +1,29 @@
-import { useContext, useState } from "react"
-import { balanceData } from "../../components/Mian2/datainfotmation"
+import { useState } from "react"
+// import { balanceData } from "../../components/Mian2/datainfotmation"
 import './style.css'
 import rubliGreen from '../../images/rubliGreen.svg'
-import TranslateContext from "../../translateContext";
-import Language from "../../translate_Ru_En";
+import { useTranslation } from "react-i18next";
+// import { useContext } from "react";
+// import TranslateContext from "../../translateContext";
+// import Language from "../../translate_Ru_En";
 // import rubliRed from '../../images/rubliRed.svg'
 // import rubli from '../../images/rubli.svg'
 
 
 function Balance() {
+    const { t } = useTranslation();
     const [status, setStatus] = useState("all");
 
-    const { translatePage } = useContext(TranslateContext);
+    // const { translatePage } = useContext(TranslateContext);
+    
+    
 
     return (
         <div className="balanceContainer">
             <div className="balance">
 
                 <div className="balance_text">
-                    <p>{Language[translatePage].headerTextBalance}</p>
+                    <p>{t('balanceData.headerTextBalance')}</p>
                 </div>
 
                 <div className="money_button">
@@ -27,22 +32,22 @@ function Balance() {
                         <img src={rubliGreen} alt="rubli" />
                     </div>
                     <div className="button_Add">
-                        <button className="button_balanceAdd">{Language[translatePage].buttonBalance}</button>
+                        <button className="button_balanceAdd">{t('balanceData.buttonBalance')}</button>
                     </div>
                 </div>
 
                 <div>
                     <div className="history">
-                        <p>{Language[translatePage].historyBalance}</p>
+                        <p>{t('balanceData.historyBalance')}</p>
                     </div>
                     <div className="button_status">
-                        <button onClick={() => setStatus("day")}>{Language[translatePage].buttonDayBalance}</button>
-                        <button onClick={() => setStatus("month")}>{Language[translatePage].buttonMonthBalance}</button>
-                        <button onClick={() => setStatus("all")}>{Language[translatePage].buttonAllBalance}</button>
+                        <button onClick={() => setStatus("day")}>{t('balanceData.buttonDayBalance')}</button>
+                        <button onClick={() => setStatus("month")}>{t('balanceData.buttonMonthBalance')}</button>
+                        <button onClick={() => setStatus("all")}>{t('balanceData.buttonAllBalance')}</button>
                     </div>
                     <div>
                         {
-                            balanceData[translatePage].map(el => {
+                            t('balanceData').map(el => {
                                 return status === "all" || el.status === status ?
                                     <div className="paymentHistory">
                                         <div className="paymentDiv"><img src={el.image} alt="image" /></div>
