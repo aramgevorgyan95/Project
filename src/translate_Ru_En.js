@@ -228,7 +228,7 @@ const Language = {
                     money: 4640,
                     data: '10.03.2021',
                     text: 'Пополнение'
-            
+
                 },
                 {
                     status: "all",
@@ -236,7 +236,7 @@ const Language = {
                     money: -2409,
                     data: '10.03.2021',
                     text: 'Оплата за консультацию'
-            
+
                 },
                 {
                     status: "day",
@@ -251,7 +251,7 @@ const Language = {
                     money: -4650,
                     data: '10.03.2021',
                     text: 'Оплата за консультацию'
-            
+
                 },
                 {
                     status: "all",
@@ -259,9 +259,9 @@ const Language = {
                     money: -2249,
                     data: '10.03.2021',
                     text: 'Оплата за консультацию'
-            
+
                 },
-            
+
             ],
         },
     },
@@ -470,7 +470,7 @@ const Language = {
                     money: 4640,
                     data: '10.03.2021',
                     text: 'Replenishment'
-            
+
                 },
                 {
                     status: "all",
@@ -478,7 +478,7 @@ const Language = {
                     money: -2409,
                     data: '10.03.2021',
                     text: 'Payment for consultation'
-            
+
                 },
                 {
                     status: "day",
@@ -493,7 +493,7 @@ const Language = {
                     money: -4650,
                     data: '10.03.2021',
                     text: 'Payment for consultation'
-            
+
                 },
                 {
                     status: "all",
@@ -501,9 +501,9 @@ const Language = {
                     money: -2249,
                     data: '10.03.2021',
                     text: 'Payment for consultation'
-            
+
                 },
-            
+
             ]
         }
     }
