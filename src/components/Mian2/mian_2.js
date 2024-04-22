@@ -2,9 +2,10 @@ import photo_register_doctor from '../../images/OBJECTS.png';
 import './style.css';
 import DoctorVisit from './DoctorsVisit/doctorVisit';
 import ButtonMain2 from './ButtonMain2/buttonMain2';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import doctorAPI from '../../services/api/doctorAPI';
 // import { useContext } from 'react';
 // import TranslateContext from '../../translateContext';
 // import { useContext } from 'react';
@@ -13,14 +14,37 @@ import { useTranslation } from 'react-i18next';
 
 
 function Main2() {
-    // const { translatePage } = useContext(TranslateContext)
-    const { t } = useTranslation();
-    const [filterStatus, setFilterStatus] = useState(1);
-    const navigate = useNavigate();
+    // const { translatePage } = useContext(TranslateContext);
+    // const [filterStatus, setFilterStatus] = useState(1);
 
-    // const changeStatus = function (status_number) {
-    //     setFilterStatus(status_number)
-    // }
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+    const [doctor, setDoctor] = useState([])
+
+    const getDoctorInfo = useCallback((category) => {
+        return () => {
+            doctorAPI.get('/', {
+                params: {
+                    page: 1,
+                    category: category
+                }
+            }).then((res) => {
+                setDoctor(res.data.results);
+            })
+        }
+    }, [])
+
+    useEffect(() => {
+        doctorAPI.get('/', {
+            params: {
+                page: 1,
+                category: 1
+            }
+        }).then((res) => {
+            setDoctor(res.data.results);
+        })
+    },[])
+
     function handleClicMynotes() {
         navigate('/mynotes');
     }
@@ -34,12 +58,12 @@ function Main2() {
 
             <div className='mian'>
                 <div className='div_buton_main2'>
-                    <ButtonMain2 text={t('buttonMain2filter1')} onClick={() => setFilterStatus(1)} />
-                    <ButtonMain2 text={t('buttonMain2filter2')} onClick={() => setFilterStatus(2)} />
-                    <ButtonMain2 text={t('buttonMain2filter3')} onClick={() => setFilterStatus(3)} />
+                    <ButtonMain2 text={t('buttonMain2filter1')} onClick={getDoctorInfo(1)} />
+                    <ButtonMain2 text={t('buttonMain2filter2')} onClick={getDoctorInfo(2)} />
+                    <ButtonMain2 text={t('buttonMain2filter3')} onClick={getDoctorInfo(4)} />
                 </div>
                 <div className='data_list'>
-                    <DoctorVisit filterStatus={filterStatus} />
+                    <DoctorVisit doctor={doctor} />
                 </div>
             </div>
         </div>

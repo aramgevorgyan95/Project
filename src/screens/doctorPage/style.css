@@ -1,8 +1,8 @@
 .doctorImformation {
     width: 100%;
-    height: 316px;
     background-color: #56CCF2;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
