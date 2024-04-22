@@ -1,12 +1,12 @@
-// import { useState } from 'react';
-import { useNavigate } from 'react-router';
-// import { arrUserDoc, buttonDoctorVisit } from '../datainfotmation';
-import ButtonVisit from './buttonVisit/buttonVizit';
-// import ImageLogo from './imageLogo';
 import './style.css';
-// import TranslateContext from '../../../translateContext';
+import { useNavigate } from 'react-router';
+import ButtonVisit from './buttonVisit/buttonVizit';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+// import { useState } from 'react';
+// import { arrUserDoc, buttonDoctorVisit } from '../datainfotmation';
+// import ImageLogo from './imageLogo';
+// import TranslateContext from '../../../translateContext';
 // import { useContext } from 'react';
 
 
@@ -15,9 +15,7 @@ import { useTranslation } from 'react-i18next';
 
 function DoctorVisit({ doctor }) {
     // const filteredArr = arrUserDoc
-
     // const [show, setShow] = useState(1);
-
     // const filteredArr = arrUserDoc.filter((el) => el.status === show);
 
     // const changeStatus = function (show) {
@@ -25,39 +23,42 @@ function DoctorVisit({ doctor }) {
     // } 
 
     // const filteredArr = dataDoctor.filter((el) => el.status === filterStatus);
-
     // const { translatePage } = useContext(TranslateContext);
-
     // const dataDoctor = t('dataDoctor', { returnObjects: true });
+
+
     const { t } = useTranslation();
     const navigate = useNavigate();
+
+
 
     const doctorInfoClick = useCallback((id) => {
         return () => {
             navigate(`/doctor/${id}`)
         }
     })
-
     return (
         <>
+
             {
                 doctor.map((el, index) => {
                     return (
-                        
+
                         <div onClick={doctorInfoClick(el.id)} className='main_visit' key={index}>
-                            {/* <div className='visit_header'>
+                            <div className='visit_header'>
                                 <div className='header_left'>
-                                    <ImageLogo src={el.logo[1]} />
+                                    {/* <ImageLogo src={el.logo[1]} />
                                     <p>{el.data}</p>
                                     <ImageLogo src={el.logo[2]} />
                                     <p>{el.time}</p>
                                     <ImageLogo src={el.logo[3]} />
-                                    <p>{el.text}</p>
+                                    <p>{el.text}</p> */}
+                                    <div className='visitHeader_status'>
+                                        <p className={`${el.user_categories[0].category.id === 1 ? 'orange' : 'visitHeader_status'} ${el.user_categories[0].category.id === 2 ? 'green' : 'visitHeader_status'} ${el.user_categories[0].category.id === 4 ? 'red' : 'visitHeader_status'}`}>STATUS</p>
+                                    </div>
                                 </div>
-                                <div className='visitHeader_status'>
-                                    <p className={`${filterStatus === 1 ? 'orange' : 'visitHeader_status'} ${filterStatus === 2 ? 'green' : 'visitHeader_status'} ${filterStatus === 3 ? 'red' : 'visitHeader_status'}`}>{el.statusText}</p>
-                                </div>
-                            </div> */}
+
+                            </div>
                             <div className='visit_imfo'>
                                 <div className='photo_ingfo'>
                                     <div className='photo_visit'>

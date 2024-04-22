@@ -21,6 +21,7 @@ function Main2() {
     const navigate = useNavigate();
     const [doctor, setDoctor] = useState([])
 
+
     const getDoctorInfo = useCallback((category) => {
         return () => {
             doctorAPI.get('/', {
@@ -43,7 +44,7 @@ function Main2() {
         }).then((res) => {
             setDoctor(res.data.results);
         })
-    },[])
+    }, [])
 
     function handleClicMynotes() {
         navigate('/mynotes');
