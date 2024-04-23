@@ -24,7 +24,7 @@ function Main2() {
 
     const getDoctorInfo = useCallback((category) => {
         return () => {
-            doctorAPI.get('/', {
+            doctorAPI.get('/get-doctors/', {
                 params: {
                     page: 1,
                     category: category
@@ -36,7 +36,7 @@ function Main2() {
     }, [])
 
     useEffect(() => {
-        doctorAPI.get('/', {
+        doctorAPI.get('/get-doctors/', {
             params: {
                 page: 1,
                 category: 1
