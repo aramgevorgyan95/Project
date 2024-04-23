@@ -10,14 +10,15 @@ import doctorAPI from "../../services/api/doctorAPI";
 function DoctorPage() {
     // const { translatePage } = useContext(TranslateContext);
     // const doctorData = t('dataDoctor', {returnObjects: true}).filter(el => el.id.toString() === id)[0];
-    const [doctorData, setDoctorData] = useState()
+    const [doctorData, setDoctorData] = useState();
     let { id } = useParams();
     const { t } = useTranslation();
+
     useEffect(() => {
         doctorAPI.get(`/user/${id}/?role=doctor`).then((res) => {
             setDoctorData(res.data)
         }).catch(error => {
-            console.error('Ошибка при загрузке данных:', error);
+            console.error('Error:', error);
         })
     }, [id])
 

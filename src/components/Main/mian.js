@@ -2,6 +2,7 @@ import "./style.css";
 import photo_doctor from '../../images/allodoctor.png.png';
 import ButtonMain from "./ButtonMain/buttonMain";
 import { useTranslation } from "react-i18next";
+
 // import TranslateContext from "../../translateContext";
 // import { useContext } from "react";
 // import Language from "../../translate_Ru_En";
