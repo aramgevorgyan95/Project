@@ -21,6 +21,8 @@ function Main2() {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const [doctor, setDoctor] = useState([])
+
+    
     const{name,email}= useSelector((state)=> {
         return state.user
     });
