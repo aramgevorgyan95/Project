@@ -1,5 +1,5 @@
-import * as UserAction from './userActions';
+import * as DoctorAction from './doctorActions'
 
 export {
-    UserAction
+    DoctorAction
 }

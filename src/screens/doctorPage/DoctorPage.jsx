@@ -3,20 +3,21 @@ import { useParams } from "react-router"
 import './style.css'
 import { useTranslation } from "react-i18next";
 import doctorAPI from "../../services/api/doctorAPI";
-// import TranslateContext from "../../translateContext";
-// import { arrUserDoc } from "../../components/Mian2/datainfotmation";
-// import { useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { DoctorAction } from "../../store/actions";
+import { selectedDoctorSelector } from "../../store/selectors/doctorSelector";
+
 
 function DoctorPage() {
-    // const { translatePage } = useContext(TranslateContext);
-    // const doctorData = t('dataDoctor', {returnObjects: true}).filter(el => el.id.toString() === id)[0];
-    const [doctorData, setDoctorData] = useState();
+    
     let { id } = useParams();
     const { t } = useTranslation();
+    const dispatch = useDispatch();
+    const doctorData = useSelector(selectedDoctorSelector);
 
     useEffect(() => {
         doctorAPI.get(`/user/${id}/?role=doctor`).then((res) => {
-            setDoctorData(res.data)
+            dispatch(DoctorAction.setSelectedDoctorAction(res.data))
         }).catch(error => {
             console.error('Error:', error);
         })

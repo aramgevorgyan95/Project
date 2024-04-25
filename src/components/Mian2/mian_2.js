@@ -2,30 +2,24 @@ import photo_register_doctor from '../../images/OBJECTS.png';
 import './style.css';
 import DoctorVisit from './DoctorsVisit/doctorVisit';
 import ButtonMain2 from './ButtonMain2/buttonMain2';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import doctorAPI from '../../services/api/doctorAPI';
-import { useSelector } from 'react-redux';
-// import { useContext } from 'react';
-// import TranslateContext from '../../translateContext';
-// import { useContext } from 'react';
-// import Language from '../../translate_Ru_En';
+import { useDispatch, useSelector } from 'react-redux';
+import { doctorListSelector } from '../../store/selectors/doctorSelector';
+import { DoctorAction } from '../../store/actions';
+
 
 
 
 function Main2() {
-    // const { translatePage } = useContext(TranslateContext);
-    // const [filterStatus, setFilterStatus] = useState(1);
 
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const [doctor, setDoctor] = useState([])
+    const dispatch = useDispatch();
+    const doctor = useSelector(doctorListSelector);
 
-    
-    const{name,email}= useSelector((state)=> {
-        return state.user
-    });
 
     const getDoctorInfo = useCallback((category) => {
         return () => {
@@ -35,7 +29,7 @@ function Main2() {
                     category: category
                 }
             }).then((res) => {
-                setDoctor(res.data.results);
+                dispatch(DoctorAction.setDoctorsAction(res.data.results));
             })
         }
     }, [])
@@ -47,7 +41,7 @@ function Main2() {
                 category: 1
             }
         }).then((res) => {
-            setDoctor(res.data.results);
+            dispatch(DoctorAction.setDoctorsAction(res.data.results));
         })
     }, [])
 
@@ -58,7 +52,6 @@ function Main2() {
         <div className='mian2_container'>
             <div className='register_doc'>
                 <img src={photo_register_doctor} alt='register_user'></img>
-                {name} : {email}
             </div>
 
             <button onClick={handleClicMynotes} style={{ margin: '10% 0 5% 38%' }} className='bottom_moiZapisi'>{t('buttonMyNotes')}</button>

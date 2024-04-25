@@ -1,5 +1,6 @@
-import * as UserTypes from './userTypes';
+import * as DoctorType from './doctorTypes';
+
 
 export {
-    UserTypes
+    DoctorType
 }

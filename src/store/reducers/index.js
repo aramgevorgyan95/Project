@@ -1,9 +1,8 @@
-import {combineReducers} from 'redux';
-import userReducer from './userReducer';
+import { combineReducers } from 'redux';
+import doctorReducer from './doctorReducer';
 
 const reducers = combineReducers({
-    // students: ()=>{},
-    user: userReducer
+    doctor: doctorReducer,
 });
 
 export default reducers;
