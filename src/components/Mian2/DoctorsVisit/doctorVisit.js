@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 
 
 
-function DoctorVisit({ doctor }) {
+function DoctorVisit({ doctorData }) {
     // const filteredArr = arrUserDoc
     // const [show, setShow] = useState(1);
     // const filteredArr = arrUserDoc.filter((el) => el.status === show);
@@ -41,7 +41,7 @@ function DoctorVisit({ doctor }) {
         <>
 
             {
-                doctor.map((el, index) => {
+                doctorData.map((el, index) => {
                     return (
 
                         <div onClick={doctorInfoClick(el.id)} className='main_visit' key={index}>

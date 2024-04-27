@@ -18,7 +18,7 @@ function Main2() {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const doctor = useSelector(doctorListSelector);
+    const doctorData = useSelector(doctorListSelector);
 
 
     const getDoctorInfo = useCallback((category) => {
@@ -63,7 +63,7 @@ function Main2() {
                     <ButtonMain2 text={t('buttonMain2filter3')} onClick={getDoctorInfo(4)} />
                 </div>
                 <div className='data_list'>
-                    <DoctorVisit doctor={doctor} />
+                    <DoctorVisit doctorData={doctorData} />
                 </div>
             </div>
         </div>

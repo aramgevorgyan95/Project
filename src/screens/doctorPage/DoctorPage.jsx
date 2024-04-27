@@ -13,7 +13,7 @@ function DoctorPage() {
     let { id } = useParams();
     const { t } = useTranslation();
     const dispatch = useDispatch();
-    const doctorData = useSelector(selectedDoctorSelector);
+    const doctorInfo = useSelector(selectedDoctorSelector);
     const status = useSelector(stateStatus);
 
     useEffect(() => {
@@ -29,16 +29,16 @@ function DoctorPage() {
         status ? <h1>Loading...</h1> :
             <div className="doctorImformation">
                 <div className="PhotoDoctorImformation">
-                    <img src={doctorData?.profile_image} alt="dd" />
+                    <img src={doctorInfo?.profile_image} alt="dd" />
                     <div className="info">
-                        <p style={{ fontSize: '24px', color: '#FFFFFF' }}>{doctorData?.first_name}</p>
-                        <p style={{ fontSize: '18px', color: '#FFFFFF' }}>{doctorData?.last_name}</p>
-                        <p style={{ fontSize: '18px', color: '#FFFFFF' }}>{doctorData?.user_categories[0].category.title.ru}</p>
+                        <p style={{ fontSize: '24px', color: '#FFFFFF' }}>{doctorInfo?.first_name}</p>
+                        <p style={{ fontSize: '18px', color: '#FFFFFF' }}>{doctorInfo?.last_name}</p>
+                        <p style={{ fontSize: '18px', color: '#FFFFFF' }}>{doctorInfo?.user_categories[0].category.title.ru}</p>
                     </div>
                 </div>
                 <div className="canteiner-consultation">
                     <div className="money_consultation">
-                        <p dangerouslySetInnerHTML={{ __html: doctorData?.user_categories[0].category.full_description.ru }}></p>
+                        <p dangerouslySetInnerHTML={{ __html: doctorInfo?.user_categories[0].category.full_description.ru }}></p>
                     </div>
                 </div>
             </div>
