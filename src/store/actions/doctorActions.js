@@ -15,7 +15,15 @@ function setSelectedDoctorAction(doctor) {
     }
 }
 
+function changeStatus(status){
+    return{
+        type:DoctorType.STATUS,
+        payload: status
+    }
+}
+
 export {
     setDoctorsAction,
-    setSelectedDoctorAction
+    setSelectedDoctorAction,
+    changeStatus
 }

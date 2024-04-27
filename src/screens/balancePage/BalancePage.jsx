@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 // import { balanceData } from "../../components/Mian2/datainfotmation"
 import './style.css'
 import rubliGreen from '../../images/rubliGreen.svg'
@@ -17,7 +17,11 @@ function Balance() {
 
     // const { translatePage } = useContext(TranslateContext);
     
-    
+    const changeStatus= useCallback((stateStatus) => {
+        return ()=> {
+            setStatus(stateStatus)
+        }
+    },[])
 
     return (
         <div className="balanceContainer">
@@ -42,9 +46,9 @@ function Balance() {
                         <p>{t('balanceData.historyBalance')}</p>
                     </div>
                     <div className="button_status">
-                        <button onClick={() => setStatus("day")}>{t('balanceData.buttonDayBalance')}</button>
-                        <button onClick={() => setStatus("month")}>{t('balanceData.buttonMonthBalance')}</button>
-                        <button onClick={() => setStatus("all")}>{t('balanceData.buttonAllBalance')}</button>
+                        <button onClick={changeStatus("day")}>{t('balanceData.buttonDayBalance')}</button>
+                        <button onClick={changeStatus("month")}>{t('balanceData.buttonMonthBalance')}</button>
+                        <button onClick={changeStatus("all")}>{t('balanceData.buttonAllBalance')}</button>
                     </div>
                     <div>
                         {
