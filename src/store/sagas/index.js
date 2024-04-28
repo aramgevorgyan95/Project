@@ -5,8 +5,8 @@ import setSelectedDoctorSaga from "./setSelectedDoctorSaga";
 
 
 function* rootSaga(){
-    yield takeLatest(DoctorType.SET_DOCTORS_LIST, doctorsListSaga)
-    yield takeLatest(DoctorType.SET_SELECTED_DOCTOR, setSelectedDoctorSaga)
+    yield takeLatest(DoctorType.SET_DOCTORS_LIST, doctorsListSaga);
+    yield takeLatest(DoctorType.SET_SELECTED_DOCTOR, setSelectedDoctorSaga);
 }
 
 export default rootSaga;

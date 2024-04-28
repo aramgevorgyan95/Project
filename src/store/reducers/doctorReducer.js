@@ -8,6 +8,7 @@ const initData = {
 
 export default function (state = initData, action) {
     const { type, payload } = action;
+    console.log(action.payload.id);
     switch (type) {
         case DoctorType.SET_DOCTORS_LIST:
             return { ...state, doctorList: payload }
